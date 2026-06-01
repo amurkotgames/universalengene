@@ -1824,12 +1824,6 @@ HacksTab:CreateToggle({
 -- INFINITE YIELD BUTTON
 ---------------------------------------------------------------------
 
-HacksTab:CreateButton({
-    Name = "Execute Infinite Yield",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-    end,
-})
 
 ---------------------------------------------------------------------
 -- END OF VR9 RAYFIELD EDITION (FINAL)
