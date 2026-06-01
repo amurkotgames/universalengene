@@ -134,7 +134,7 @@ end
 
 if makefolder and isfolder and writefile and isfile then
 	pcall(function() -- good executor trust
-		local assets = "/"
+		local assets = "https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/"
 		for _, folder in {"infiniteyield", "infiniteyield/assets"} do
 			if not isfolder(folder) then
 				makefolder(folder)
@@ -183,6 +183,7 @@ Tooltip = Instance.new("Frame")
 Title_3 = Instance.new("TextLabel")
 Description = Instance.new("TextLabel")
 IntroBackground = Instance.new("Frame")
+Logo = Instance.new("ImageLabel")
 Credits = Instance.new("TextBox")
 KeybindsFrame = Instance.new("Frame")
 Close = Instance.new("TextButton")
