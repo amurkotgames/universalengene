@@ -354,7 +354,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Universal Engene by AmurKot"
+Title.Text = "Uneversal Engene" .. currentVersion
 
 do
 	local emoji = ({
@@ -3114,7 +3114,7 @@ function saves()
 		if jsonAttempts >= 10 then
 			nosaves = true
 			useFactorySettings()
-			createPopup("File Error", "Sorry, we have attempted to parse your save file, but it is unreadable!\n\nUneversal Engene is now using factory settings until your exploit's file system works.\n\nYour save file has not been deleted.")
+			createPopup("File Error", "Sorry, we have attempted to parse your save file, but it is unreadable!\n\nUniversal Engene is now using factory settings until your exploit's file system works.\n\nYour save file has not been deleted.")
 		else
 			nosaves = true
 			useFactorySettings()
@@ -4459,7 +4459,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
-CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Uneversal Engene telegram chanell.'}
+CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Universal Engene discord server.'}
 CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts decimals and whole numbers. Min is 0.4 and Max is 2'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Opens the Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'oldconsole', DESC = 'Loads an old-themed Roblox console'}
@@ -6564,7 +6564,7 @@ end)
 addcmd('unkeepiy', {}, function(args, speaker)
 	if queueteleport then
 		KeepInfYield = false
-		notify('KeepIY', 'Universal Engene will no longer run after you teleport')
+		notify('KeepIY','Universal Engene will no longer run after you teleport')
 		updatesaves()
 	else
 		notify('Incompatible Exploit','Your exploit does not support this command (missing queue_on_teleport)')
