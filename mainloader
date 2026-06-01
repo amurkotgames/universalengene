@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
    ShowText = "VR9",
    Theme = "Dark",
 
-   ToggleUIKeybind = "`",
+   ToggleUIKeybind = "K",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
@@ -145,6 +145,50 @@ MainTab:CreateParagraph({
 -- FEEDBACK (Embed Webhook)
 ---------------------------------------------------------------------
 
+MainTab:CreateInput({
+    Name = "Send Feedback",
+    PlaceholderText = "Type your feedback here...",
+    RemoveTextAfterFocusLost = true,
+    Callback = function(text)
+        sendEmbed(
+            "https://discord.com/api/webhooks/1507558369425363116/YeBChhTK0-XWxM646YsqX3dYSA6vSCU1jQLIeUDr6pYbHS6cOFiT01KEb84iDICAPLl5",
+            "📨 VR9 Feedback",
+            text,
+            65280 -- green
+        )
+
+        Rayfield:Notify({
+            Title = "Feedback Sent",
+            Content = "Your feedback has been delivered to the EIA server.",
+            Duration = 3
+        })
+    end
+})
+
+---------------------------------------------------------------------
+-- BUG REPORT (Embed Webhook)
+---------------------------------------------------------------------
+
+MainTab:CreateInput({
+    Name = "Report a Bug",
+    PlaceholderText = "Describe the bug...",
+    RemoveTextAfterFocusLost = true,
+    Callback = function(text)
+        sendEmbed(
+            "https://discord.com/api/webhooks/1507558369425363116/YeBChhTK0-XWxM646YsqX3dYSA6vSCU1jQLIeUDr6pYbHS6cOFiT01KEb84iDICAPLl5",
+            "🐞 VR9 Bug Report",
+            text,
+            16711680 -- red
+        )
+
+        Rayfield:Notify({
+            Title = "Bug Report Sent",
+            Content = "Your bug report has been delivered to the EIA server.",
+            Duration = 3
+        })
+    end
+})
+
 --// TOOLS
 ToolsTab:CreateParagraph({
     Title = "Tools",
@@ -171,7 +215,7 @@ SettingsTab:CreateParagraph({
 
 SettingsTab:CreateKeybind({
     Name = "Change UI Toggle Key",
-    CurrentKeybind = "`",
+    CurrentKeybind = "K",
     HoldToInteract = false,
     Flag = "UIToggleKey",
     Callback = function(key)
@@ -194,6 +238,21 @@ SettingsTab:CreateSlider({
     end,
 })
 
+SettingsTab:CreateDropdown({
+    Name = "UI Theme",
+    Options = {"Amethyst", "Dark", "Light", "Ocean", "Midnight"},
+    CurrentOption = {"Amethyst"},
+    MultipleOptions = false,
+    Flag = "ThemeDropdown",
+    Callback = function(option)
+        Rayfield:LoadConfiguration()
+        Rayfield:Notify({
+            Title = "Theme Changed",
+            Content = "Theme set to " .. option[1],
+            Duration = 3
+        })
+    end,
+})
 
 local fpsUnlocked = false
 
@@ -236,7 +295,7 @@ SettingsTab:CreateButton({
 --// CREDITS
 CreditsTab:CreateParagraph({
     Title = "Universal Engene",
-    Content = "Created by AmurKot\nTelegram: https://t.me/AmurK0T\nSanya Chanell: https://amurkot.pw/Sanya?joi=2"
+    Content = "Created by AmurKot\nTelegram: https://t.me/AmurK0T\nSanya Chanell: https://amurkot.pw/Sanya?join=2"
 })
 
 --// TRUE ANTI FALL DAMAGE (MINECRAFT CLONE FIX)
