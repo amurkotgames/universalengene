@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
    ShowText = "VR9",
    Theme = "Dark",
 
-   ToggleUIKeybind = "K",
+   ToggleUIKeybind = "`",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
@@ -171,7 +171,7 @@ SettingsTab:CreateParagraph({
 
 SettingsTab:CreateKeybind({
     Name = "Change UI Toggle Key",
-    CurrentKeybind = "K",
+    CurrentKeybind = "`",
     HoldToInteract = false,
     Flag = "UIToggleKey",
     Callback = function(key)
@@ -235,8 +235,8 @@ SettingsTab:CreateButton({
 
 --// CREDITS
 CreditsTab:CreateParagraph({
-    Title = "Credits",
-    Content = "Made by Pirate_Timmy\nHelper: Blackfigure0003\nAssistant: Copilot"
+    Title = "Universal Engene",
+    Content = "Created by AmurKot\nTelegram: https://t.me/AmurK0T\nSanya Chanell: https://amurkot.pw/Sanya?joi=2"
 })
 
 --// TRUE ANTI FALL DAMAGE (MINECRAFT CLONE FIX)
