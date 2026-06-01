@@ -141,54 +141,6 @@ MainTab:CreateParagraph({
     Content = "This is the main tab where you can report bugs, add feedback, and so much more!"
 })
 
----------------------------------------------------------------------
--- FEEDBACK (Embed Webhook)
----------------------------------------------------------------------
-
-MainTab:CreateInput({
-    Name = "Send Feedback",
-    PlaceholderText = "Type your feedback here...",
-    RemoveTextAfterFocusLost = true,
-    Callback = function(text)
-        sendEmbed(
-            "https://discord.com/api/webhooks/1507558369425363116/YeBChhTK0-XWxM646YsqX3dYSA6vSCU1jQLIeUDr6pYbHS6cOFiT01KEb84iDICAPLl5",
-            "📨 VR9 Feedback",
-            text,
-            65280 -- green
-        )
-
-        Rayfield:Notify({
-            Title = "Feedback Sent",
-            Content = "Your feedback has been delivered to the EIA server.",
-            Duration = 3
-        })
-    end
-})
-
----------------------------------------------------------------------
--- BUG REPORT (Embed Webhook)
----------------------------------------------------------------------
-
-MainTab:CreateInput({
-    Name = "Report a Bug",
-    PlaceholderText = "Describe the bug...",
-    RemoveTextAfterFocusLost = true,
-    Callback = function(text)
-        sendEmbed(
-            "https://discord.com/api/webhooks/1507558369425363116/YeBChhTK0-XWxM646YsqX3dYSA6vSCU1jQLIeUDr6pYbHS6cOFiT01KEb84iDICAPLl5",
-            "🐞 VR9 Bug Report",
-            text,
-            16711680 -- red
-        )
-
-        Rayfield:Notify({
-            Title = "Bug Report Sent",
-            Content = "Your bug report has been delivered to the EIA server.",
-            Duration = 3
-        })
-    end
-})
-
 --// TOOLS
 ToolsTab:CreateParagraph({
     Title = "Tools",
