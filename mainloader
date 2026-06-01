@@ -5,7 +5,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "VR9 | v1.9.2",
+   Name = "Universal Egene | v1",
    Icon = 0,
    LoadingTitle = "Universal Egene",
    LoadingSubtitle = "Developer: AmurKot",
