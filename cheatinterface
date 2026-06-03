@@ -1778,7 +1778,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				if rayfieldDestroyed then break end
 				RayfieldLibrary:Notify({
 					Title = "Понравился чит?",
-					Content = "Вступай в наш тгк t.me/AmurK0T\n\nOR\n\nКанал в Sanya amurkot.pw/Sanya?join=",
+					Content = "Вступай в наш тгк t.me/AmurK0T\n\nИЛИ\n\nКанал в Sanya amurkot.pw/Sanya?join=2",
 					Duration = 7,
 					Image = 4370033185,
 				})
