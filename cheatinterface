@@ -1777,8 +1777,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 				task.wait(math.random(180, 600))
 				if rayfieldDestroyed then break end
 				RayfieldLibrary:Notify({
-					Title = "Join to my telegram",
-					Content = "Join to my telegram chanell! t.me/AmurK0T",
+					Title = "Понравился чит?",
+					Content = "Вступай в наш тгк t.me/AmurK0T\n\nOR\n\nКанал в Sanya amurkot.pw/Sanya?join=",
 					Duration = 7,
 					Image = 4370033185,
 				})
